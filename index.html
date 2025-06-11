@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyana Prakash Khandual - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        main {
+            width: 210mm;
+            min-height: 297mm;
+            height: auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            overflow: visible;
+        }
+
+        /* Left Column Styling */
+        .left-column {
+            background: linear-gradient(to right, #eff6ff, #ffffff, #faf5ff);
+            color: #1f2937;
+            padding: 30px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            border-right: 1px solid #e5e7eb;
+        }
+
+        #logo h6 {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            background: linear-gradient(to right, #dbeafe, #f3e8ff);
+            color: #4f46e5;
+            padding: 8px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            border: 1px solid #e0e7ff;
+        }
+
+        .age-info {
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            background: linear-gradient(to right, #f3e8ff, #ecfdf5);
+            color: #7c3aed;
+            padding: 6px 12px;
+            border-radius: 15px;
+            border: 1px solid #d8b4fe;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        #contact p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        #contact p span {
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #c7d2fe;
+            padding-bottom: 5px;
+            color: #4338ca;
+        }
+
+        .education-item {
+            background: linear-gradient(to right, #f0f9ff, #fefce8, #f3f4f6);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .education-item h6 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #7c3aed;
+        }
+
+        .education-item p {
+            font-size: 11px;
+            margin-bottom: 4px;
+            color: #4b5563;
+        }
+
+        #techskills {
+            background: linear-gradient(to right, #fef3c7, #ecfdf5, #f0f9ff);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #d1d5db;
+        }
+
+        .skill-category {
+            margin-bottom: 15px;
+        }
+
+        .skill-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-label {
+            font-weight: bold;
+            font-size: 12px;
+            color: #059669;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+            color: #3730a3;
+            font-size: 9px;
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 12px;
+            border: 1px solid #c7d2fe;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            background: linear-gradient(135deg, #c7d2fe, #ddd6fe);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Right Column Styling */
+        .right-column {
+            padding: 30px 35px;
+            background: linear-gradient(to right, #ffffff, #f8fafc, #fefce8);
+        }
+
+        .top {
+            margin-bottom: 25px;
+            border-bottom: 3px solid #8b5cf6;
+            padding-bottom: 15px;
+            background: linear-gradient(to right, #fef7ff, #ffffff, #f0f9ff);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .top p:first-child {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .top p:last-child {
+            font-size: 14px;
+            color: #7c3aed;
+            font-weight: 500;
+        }
+
+        .about {
+            margin-bottom: 25px;
+        }
+
+        .about p {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+        }
+
+        .section-header {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project {
+            background: linear-gradient(to right, #f0f9ff, #fefce8, #f8fafc);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 6px solid #3b82f6;
+            border: 1px solid #e2e8f0;
+        }
+
+        .project p:first-child {
+            font-weight: bold;
+            color: #333;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .project p {
+            font-size: 11px;
+            margin-bottom: 4px;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .experience {
+            background: linear-gradient(to right, #ecfdf5, #f0fdf4, #f0f9ff);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 6px solid #10b981;
+            border: 1px solid #d1fae5;
+        }
+
+        .experience p:first-child {
+            font-weight: bold;
+            color: #333;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .experience p {
+            font-size: 11px;
+            margin-bottom: 4px;
+            color: #555;
+        }
+
+        .key {
+            background: linear-gradient(to right, #fef3c7, #fefce8, #fffbeb);
+            padding: 22px;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            border: 1px solid #fed7aa;
+        }
+
+        .key p {
+            font-size: 11px;
+            margin-bottom: 8px;
+            color: #92400e;
+            line-height: 1.4;
+        }
+
+        .key p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            main {
+                box-shadow: none;
+                width: 100%;
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="left-column">
+            <div id="logo">
+                <h6>Hungry For Work</h6>
+                <div class="age-info">Age: 21</div>
+            </div>
+
+            <div id="contact">
+                <div class="section-title">Contact</div>
+                <p><span>📞</span> 7606939833, Odisha, 755011</p>
+                <p><span>✉️</span> gyanaprakashkhnadual@gmail.com</p>
+                <p><span>🌐</span> https://codewithchris.vercel.app</p>
+            </div>
+
+            <div id="education">
+                <div class="section-title">Education</div>
+                <div class="education-item">
+                    <h6>Bachelor Of Science</h6>
+                    <p>Honours: Physics</p>
+                    <p>From: Utkal University, Bhubaneswar</p>
+                    <p>Graduate Time: July 2021 - July 2024</p>
+                </div>
+                <div class="education-item">
+                    <h6>SDET</h6>
+                    <p>Area: Quality Assurance Engineering</p>
+                    <p>From: MASAI, Bengaluru</p>
+                    <p>Graduate Time: July 2024 - Jan 2025</p>
+                </div>
+                <div class="education-item">
+                    <h6>Master in Computer Application</h6>
+                    <p>Mode: Open Distance Learning</p>
+                    <p>From: Indira Gandhi University</p>
+                    <p>Graduation Year: Currently Studying</p>
+                </div>
+            </div>
+
+            <div id="techskills">
+                <div class="section-title">Tech Skills</div>
+                <div class="skill-category">
+                    <div class="skill-label">Frontend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Boot Strap</span>
+                        <span class="skill-tag">Material UI</span>
+                        <span class="skill-tag">GSAP</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Blender</span>
+                        <span class="skill-tag" style="width: 73px; text-align: center;">Three JS</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Icon</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-label">Backend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Bcrypt</span>
+                        <span class="skill-tag" style="width: 85px; text-align: center;">Mongoose</span>
+                        <span class="skill-tag">JWT</span>
+                        <span class="skill-tag">Nest JS</span>
+                        <span class="skill-tag">My SQL</span>
+                        <span class="skill-tag" style="width: 65px; text-align: center;">Passport JS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-label">Testing</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Playwright</span>
+                        <span class="skill-tag">Puppeteer</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">XCUITest</span>
+                        <span class="skill-tag">Espresso</span>
+                        <span class="skill-tag" style="width: 53px; text-align: center;">Winium</span>
+                        <span class="skill-tag">Locust</span>
+                        <span class="skill-tag">Faker</span>
+                        <span class="skill-tag">Nigh JS</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag" style="width: 53px; text-align: center;">Python</span>
+                        <span class="skill-tag">Java Script</span>
+                        <span class="skill-tag">Type Script</span>
+                        <span class="skill-tag">BDD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="top">
+                <p>Gyana Prakash Khandual</p>
+                <p>Quality Assurance Engineer & Full Stack Developer</p>
+            </div>
+
+            <div class="about">
+                <p>I hereby declare that I am a dedicated and responsible QA Tester and Full Stack Developer, committed
+                    to delivering high-quality software solutions. I possess a strong work ethic, a continuous learning
+                    mindset, and a passion for solving complex technical challenges.</p>
+            </div>
+
+            <div class="section-header">Projects</div>
+
+            <div class="project">
+                <p>CaffeeTest • Development Time: 100 Hours</p>
+                <p><strong>Features:</strong> This is a lite but different version of Jira platform</p>
+                <p><strong>Use case:</strong> Using this user can add, edit, delete, track the bugs</p>
+                <p><strong>Tech Stack:</strong> Next JS, Tailwind CSS, Express JS, MongoDB, Restful APIs, Framer</p>
+            </div>
+
+            <div class="project">
+                <p>Pioneers Wine • Testing Time: 70 Hours</p>
+                <p><strong>Work:</strong> Complete End to End testing of E-Commerce Application on Website</p>
+                <p><strong>Areas:</strong> Functional, APIs, Load, Stress, Database, Security Testing with Reports</p>
+                <p><strong>Tech Stack:</strong> Selenium, Rest Assured, Grafana, Burp Suite, Allure Report, Jira, DBunit
+                </p>
+            </div>
+
+            <div class="project">
+                <p>Orange HRM • Testing Time: 70 Hours</p>
+                <p><strong>Work:</strong> Complete End to End testing of HR Management Application on Website</p>
+                <p><strong>Areas:</strong> Functional, APIs, Load, Stress, Database, Security Testing with Reports</p>
+                <p><strong>Tech Stack:</strong> Cypress, Postman, JMeter, OWASP ZAP, Chai, Mocha, JDBC, Testify, Git</p>
+            </div>
+
+            <div class="project">
+                <p>Youtube • Testing Time: 70 Hours</p>
+                <p><strong>Work:</strong> Complete End to End testing of Video Streaming Application on Mobile</p>
+                <p><strong>Areas:</strong> Functional, APIs, Load, Stress, Database, Security Testing with Reports</p>
+                <p><strong>Tech Stack:</strong> Appium, SoapUI, Blaze Meter, Katlon Studio, JUnit, TestNG, Cucumber</p>
+            </div>
+
+            <div class="section-header">Experience</div>
+
+            <div class="experience">
+                <p>💼 <strong>Avidus Interactive</strong> • April 2024 – Present</p>
+                <p>🧑‍💻 <strong>Role:</strong> Quality Assurance Analyst</p>
+                <p>✅ <strong>Work:</strong> Ensuring end-to-end product quality</p>
+                <p>🛠️ Conducted manual and automated tests to identify and resolve bugs early</p>
+                <p>🤝 Worked closely with developers and designers to refine user flows and UI behavior</p>
+                <p>📉 Reduced critical issues by implementing detailed test cases and edge-case scenes</p>
+                <p>⚡ Boost release efficiency by optimizing QA workflows and improving test coverage</p>
+            </div>
+
+
+            <div class="section-header">Key Strengths</div>
+
+            <div class="key">
+                <p>• I always build my own tech stack for the manual part in testing</p>
+                <p>• Using AI I can test API, Load, Stress & Performance Testing in Just 3 Hours</p>
+                <p>• Always prefer AI over manual work while knowing line by line of the code</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
